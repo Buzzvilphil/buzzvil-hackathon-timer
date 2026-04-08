@@ -60,19 +60,20 @@
     position: relative;
     z-index: 10;
     text-align: center;
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   /* Top window bar */
   .window-bar {
     display: flex;
     gap: 8px;
-    padding: 16px 20px;
+    padding: 16px 24px;
     background: rgba(30, 36, 48, 0.8);
-    border-radius: 12px 12px 0 0;
-    border: 1px solid rgba(0, 220, 255, 0.15);
-    border-bottom: none;
+    border-bottom: 1px solid rgba(0, 220, 255, 0.15);
+    flex-shrink: 0;
   }
 
   .window-dot {
@@ -85,11 +86,14 @@
 
   .main-panel {
     background: rgba(14, 18, 26, 0.95);
-    border: 1px solid rgba(0, 220, 255, 0.15);
-    border-radius: 0 0 12px 12px;
-    padding: 40px 40px 50px;
+    padding: 3vh 5vw 4vh;
     position: relative;
     overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   /* Circuit decoration */
@@ -105,9 +109,9 @@
 
   .event-title {
     font-family: 'Orbitron', monospace;
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.8rem);
     font-weight: 900;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     color: #fff;
     margin-bottom: 4px;
     position: relative;
@@ -119,7 +123,7 @@
     font-size: clamp(0.8rem, 1.5vw, 1rem);
     color: rgba(0, 220, 255, 0.6);
     letter-spacing: 3px;
-    margin-bottom: 30px;
+    margin-bottom: 2vh;
     position: relative;
     z-index: 1;
   }
@@ -137,10 +141,10 @@
   /* Motto */
   .motto {
     font-family: 'Orbitron', monospace;
-    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 900;
     line-height: 1.2;
-    margin-bottom: 35px;
+    margin-bottom: 3vh;
     position: relative;
     z-index: 1;
   }
@@ -182,7 +186,8 @@
   .timer-wrapper {
     position: relative;
     z-index: 1;
-    margin: 20px 0 30px;
+    margin: 2vh 0 3vh;
+    width: 100%;
   }
 
   .timer-label {
@@ -209,7 +214,7 @@
 
   .time-digits {
     font-family: 'Orbitron', monospace;
-    font-size: clamp(3rem, 10vw, 7rem);
+    font-size: clamp(4rem, 13vw, 11rem);
     font-weight: 900;
     color: #00dcff;
     text-shadow:
@@ -249,7 +254,7 @@
 
   .time-separator {
     font-family: 'Orbitron', monospace;
-    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-size: clamp(3rem, 10vw, 8rem);
     color: #00dcff;
     text-shadow: 0 0 20px rgba(0, 220, 255, 0.6);
     animation: blink 1s step-end infinite;
@@ -266,7 +271,9 @@
   .progress-section {
     position: relative;
     z-index: 1;
-    margin-top: 40px;
+    margin-top: 3vh;
+    width: 100%;
+    max-width: 900px;
   }
 
   .progress-info {
@@ -314,11 +321,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 2vh;
+    padding-top: 2vh;
     border-top: 1px solid rgba(0, 220, 255, 0.1);
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: 900px;
   }
 
   .info-block {
